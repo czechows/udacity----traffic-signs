@@ -89,6 +89,8 @@ However, the validation accuracy was still below 0.9 (overfitting).
 The problem was remedied by addition of dropout layers after the fully connected layers 
 and by creation of additional data with use of symmetries.
 The training accuracy improved to approx 0.97-0.98 and the validation accuracy to approx 0.97.
+I was satisfied with the model, and evaluated the test accuracy which turned out to be approx 0.96.
+
 Initially, there was a bug in algorithm establishing validation accuracy and testing accuracy
 (dropout was not disabled), which negatively affected the performance on validation set,
 and appeared as if overfitting was still present.
