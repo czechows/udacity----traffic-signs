@@ -72,11 +72,11 @@ As a result, the training set is augmented from 34799 examples to 53308 examples
 | Argmax         	| input logits outputs predicted label		|
 |:---------------------:|:---------------------------------------------:| 
 
-Number of epochs: 120 -- Long, but still took shorter than creating artificial data. Additional epochs paid off in accuracy.
-Batch size: 400 -- experimental choice.
-Learn rate: 1e-3 -- left the same as for digit recognition.
-Optimizer: Adam optimizer -- I did not compare with others, documentation online says that it's most cutting edge.
-Mimimization of: cross entropy -- as is advised by several blogs to use it instead of MSE, performs better during backpropagation.
+ * Number of epochs: 120 -- Long, but still took shorter than creating artificial data. Additional epochs paid off in accuracy.
+ * Batch size: 400 -- experimental choice.
+ * Learn rate: 1e-3 -- left the same as for digit recognition.
+ * Optimizer: Adam optimizer -- I did not compare with others, documentation online says that it's most cutting edge.
+ * Mimimization of: cross entropy -- as is advised by several blogs to use it instead of MSE, performs better during backpropagation.
 
 6. Solution approach
 
