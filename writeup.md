@@ -20,20 +20,20 @@ The file Traffic_Sign_Classifier.html containst an html snapshot of the workbook
 
 2. Initial dataset summary:
 
-Number of training examples = 34799
-Number of validation examples = 4410
-Number of testing examples = 12630
-Image data shape = (32, 32, 3) (RGB)
-Number of classes = 43
+ * Number of training examples = 34799
+ * Number of validation examples = 4410
+ * Number of testing examples = 12630
+ * Image data shape = (32, 32, 3) (RGB)
+ * Number of classes = 43
 
-3. Exploratory visualization -- the ipython notebook contains exploratory visualization of the dataset, which contains a plot of the histogram of training examples,
+3. Exploratory visualization -- the ipython notebook contains exploratory visualization of the dataset, including a plot of the histogram of training examples,
 and a display of one color image from each of the 43 classes of the images.
 
 4. Preprocessing -- the preprocessing pipeline consists of
 
 a) Normalization of pixels to range [-1,1]. This accelerates the training.
 
-b) Conversion from RGB to grayscale. According to the paper [Sermanet, LeCun, 2011] this gives better performance
+b) Conversion from RGB to grayscale. According to the paper [Sermanet, LeCun, 2011] this gives better performance on this set.
 
 c) Creation of additional training images by the logic: if the image label is in set [9, 11, 12, 13, 15, 17, 18, 22, 26, 29, 30, 35],
 then the image can be flipped horizontally to create a new training image with the same label. If the image label is in the set [12,15,17],
@@ -72,11 +72,11 @@ As a result, the training set is augmented from 34799 examples to 53308 examples
 | Argmax         	| input logits outputs predicted label		|
 |:---------------------:|:---------------------------------------------:| 
 
-Number of epochs: 120 (Long, but still took shorter than creating artificial data. Additional epochs paid off in accuracy.)
-Batch size: 400 (experimental choice)
-Learn rate: 1e-3 (left the same as for digit recognition)
-Optimizer: Adam optimizer (I did not compare with others, documentation online says that it's most cutting edge)
-Mimimization of: cross entropy (as is advised by several blogs to use it instead of MSE, performs better during backpropagation)
+Number of epochs: 120 -- Long, but still took shorter than creating artificial data. Additional epochs paid off in accuracy.
+Batch size: 400 -- experimental choice.
+Learn rate: 1e-3 -- left the same as for digit recognition.
+Optimizer: Adam optimizer -- I did not compare with others, documentation online says that it's most cutting edge.
+Mimimization of: cross entropy -- as is advised by several blogs to use it instead of MSE, performs better during backpropagation.
 
 6. Solution approach
 
@@ -97,11 +97,11 @@ Note to self: always disable dropout, and always make keep prob. a tf variable.
 7. Acquiring new images
 
 I acquired 5 new images of traffic signs: 
-a) a 30km/h speed limit sign
-b) a 60km/h speed limit sign
-c) a children crossing sign
-d) a stop sign
-e) a turn left ahead sign.
+ * a 30km/h speed limit sign
+ * a 60km/h speed limit sign
+ * a children crossing sign
+ * a stop sign
+ * a turn left ahead sign.
 
 The images are visualized in the iPython notebook and available in the web directory of github repo,
 so there is no need to paste them here.
